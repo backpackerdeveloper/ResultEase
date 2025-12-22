@@ -128,7 +128,7 @@ export function SubjectAverageChart({
   data, 
   className,
   ...props 
-}: Omit<BarChartProps, 'title' | 'description' | 'formatValue'> & {
+}: Omit<BarChartProps, 'title' | 'description' | 'formatValue' | 'data'> & {
   data: Array<{ subject: string; average: number }>
 }) {
   const chartData = data.map(item => ({
@@ -153,7 +153,7 @@ export function GradeDistributionChart({
   data,
   className,
   ...props
-}: Omit<BarChartProps, 'title' | 'description' | 'formatValue'> & {
+}: Omit<BarChartProps, 'title' | 'description' | 'formatValue' | 'data'> & {
   data: Array<{ grade: string; count: number }>
 }) {
   const chartData = data.map(item => ({
