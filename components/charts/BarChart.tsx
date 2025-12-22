@@ -77,14 +77,14 @@ export function BarChart({
           }}
         >
           {showGrid && <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />}
-          <XAxis 
+          <XAxis
             dataKey={nameKey}
             axisLine={false}
             tickLine={false}
             tick={{ fontSize: 12, fill: '#6b7280' }}
             tickFormatter={formatLabel}
           />
-          <YAxis 
+          <YAxis
             axisLine={false}
             tickLine={false}
             tick={{ fontSize: 12, fill: '#6b7280' }}
@@ -92,8 +92,8 @@ export function BarChart({
           />
           <Tooltip content={<CustomTooltip />} />
           {showLegend && <Legend />}
-          <Bar 
-            dataKey={dataKey} 
+          <Bar
+            dataKey={dataKey}
             fill={color}
             radius={[4, 4, 0, 0]}
           />
