@@ -25,7 +25,7 @@ export function Header({ className }: HeaderProps) {
   }
 
   const navigation = [
-    { name: 'Home', href: '/marketing' },
+    { name: 'Home', href: '/home' },
     { name: 'Dashboard', href: '/dashboard' },
     { name: 'Upload', href: '/upload' },
     { name: 'Reports', href: '/reports' },

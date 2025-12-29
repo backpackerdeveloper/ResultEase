@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import React,{ useEffect} from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 
@@ -27,7 +27,7 @@ export function useProtectedRoute() {
 
     // Redirect to marketing page if not authenticated
     if (!user) {
-      router.push('/marketing')
+      router.push('/home')
     }
   }, [user, loading, router])
 
@@ -82,7 +82,7 @@ export function ProtectedRoute({ children, fallback }: ProtectedRouteProps) {
   const { user, loading } = useAuth()
 
   if (loading) {
-    return fallback || <div>Loading...</div>
+    return fallback || <div>loading</div>
   }
 
   if (!user) {
