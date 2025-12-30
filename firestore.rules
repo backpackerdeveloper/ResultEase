@@ -104,6 +104,18 @@ service cloud.firestore {
     }
     
     // ============================================
+    // PLANS COLLECTION (Pricing)
+    // ============================================
+    match /plans/{planId} {
+      // Anyone can read pricing plans (public pricing information)
+      allow read: if true;
+      
+      // Only authenticated admins can write (future: add admin check)
+      // For now, pricing updates should be done through Firebase Console
+      allow write: if false;
+    }
+    
+    // ============================================
     // REPORTS COLLECTION (Future)
     // ============================================
     // Uncomment when you implement report saving to Firestore
